@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bloom Spiral</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+  <div class="app-title">Bloom Spiral</div>
+
+  <div class="canvas-shell">
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+  <div class="control-bar">
+
+    <div>
+      <label>잎 개수:</label>
+      <input type="range" id="leafCount" min="8" max="64" step="2" value="32">
+      <span id="leafCountText">32</span>
+    </div>
+
+    <div>
+      <label>패턴 크기:</label>
+      <input type="range" id="scaleSlider" min="60" max="130" value="100">
+      <span id="scaleText">100%</span>
+    </div>
+
+    <div>
+      <label>잎 시작:</label>
+      <input type="number" id="leafStart" value="70" min="10" max="220">
+
+      <label>벌레 수:</label>
+      <input type="number" id="bugCount" value="8" min="1" max="40">
+    </div>
+
+    <!-- 컬러 컨트롤들 -->
+    <div class="color-input">
+      <label>라인:</label>
+      <input type="color" id="lineColor" value="#325940">
+    </div>
+
+    <div class="color-input">
+      <label>메인:</label>
+      <input type="color" id="mainColor" value="#D74236">
+    </div>
+
+    <div class="color-input">
+      <label>보조:</label>
+      <input type="color" id="accentColor" value="#A3BFAF">
+    </div>
+
+    <div class="color-input">
+      <label>서브:</label>
+      <input type="color" id="subColor" value="#648C72">
+    </div>
+
+    <div class="color-input">
+      <label>라이트:</label>
+      <input type="color" id="lightColor" value="#F2F2F2">
+    </div>
+
+    <div class="preset-bar">
+  <button class="preset" data-preset="tropical">Tropical</button>
+  <button class="preset" data-preset="mystic">Mystic</button>
+  <button class="preset" data-preset="forest">Forest</button>
+</div>
+    <!-- 타일 배치 ON / OFF -->
+    <button id="tileToggleBtn">타일 배치: OFF</button>
+
+    <!-- 타일 밀도 슬라이더 -->
+    <div>
+      <label>타일 밀도:</label>
+      <input type="range" id="densitySlider" min="1" max="5" value="2">
+      <span id="densityText">2</span>
+    </div>
+
+
+
+    <button id="redrawBtn">새로 그리기</button>
+    <button id="downloadBtn">이미지 다운로드</button>
+
+  </div>
+</div>
+
+<!-- ⚠️ 여기에는 src만! 안에 코드 넣지 말기 -->
+<script src="script.js"></script>
+</body>
+</html>
